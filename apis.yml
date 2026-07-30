@@ -1,21 +1,47 @@
 aid: lendinvest
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lendinvest.png
 name: LendInvest
-description: 'LendInvest is a company surfaced as a portfolio company of atomico and added to the API
-  Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'LendInvest is a London-based fintech property finance platform and mortgage lender, founded
+  in 2013 after spinning out of Montello Bridging Finance, and listed on the London Stock Exchange AIM
+  market under the ticker LINV since July 2021. It originates and services short-term bridging finance,
+  property development finance, buy-to-let and residential mortgages for UK intermediaries, brokers,
+  property developers, landlords and investors, and runs a parallel capital business that lets individual,
+  corporate and institutional investors put money into secured UK property loans. The company distributes
+  almost entirely through mortgage intermediaries via its Mortgages Portal, and was the first UK fintech
+  to securitise its own buy-to-let loan book. LendInvest publishes no public developer API, developer
+  portal or SDKs; its broker and borrower integrations run through hosted portals rather than a documented
+  public API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/lendinvest/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - atomico
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Fintech
+- Lending
+- Mortgages
+- Property Finance
+- Real Estate
+- Financial Services
+- United Kingdom
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +51,38 @@ maintainers:
 common:
 - type: Website
   url: https://www.lendinvest.com
+- type: Blog
+  url: https://www.lendinvest.com/blog/
+- type: Support
+  url: https://www.lendinvest.com/contact/
+- type: SignUp
+  url: https://customerportal.lendinvest.com/s/brokerregistrationform
+- type: Login
+  url: https://customerportal.lendinvest.com/s/
+- type: TermsOfService
+  url: https://www.lendinvest.com/terms-and-conditions/user-agreement/
+- type: PrivacyPolicy
+  url: https://www.lendinvest.com/terms-and-conditions/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/lend-invest
+- type: Packages
+  url: packages/lendinvest-packages.yml
+- type: WellKnown
+  url: well-known/lendinvest-well-known.yml
+- type: Authentication
+  url: authentication/lendinvest-authentication.yml
+- type: OpenIDConnect
+  url: well-known/lendinvest-openid-configuration.json
+- type: OAuthScopes
+  url: scopes/lendinvest-scopes.yml
+- type: Conformance
+  url: conformance/lendinvest-conformance.yml
+- type: DomainSecurity
+  url: security/lendinvest-domain-security.yml
+- type: LLMsTxt
+  url: llms/lendinvest-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
