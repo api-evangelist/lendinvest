@@ -1,0 +1,64 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of the /.well-known/ surface on every LendInvest host resolved from apis.yml and certificate transparency (crt.sh)
+notes: >-
+  LendInvest publishes no public developer API, so there is no api-catalog, ai-plugin or
+  security.txt anywhere on the estate. The one real discovery document on the estate is the
+  OpenID Connect configuration served by customerportal.lendinvest.com, the Salesforce
+  Experience Cloud community that fronts the broker / borrower Mortgages Portal. Most
+  www and api hosts answer 404; docs.lendinvest.com sits behind a WAF that returns 403 to
+  automated clients, so its /.well-known/ surface could not be confirmed either way.
+hosts:
+- host: https://www.lendinvest.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /security.txt
+    status: 404
+- host: https://api.lendinvest.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://docs.lendinvest.com
+  note: all paths return 403 from a WAF; presence or absence not determinable
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+- host: https://customerportal.lendinvest.com
+  note: Salesforce Experience Cloud portal fronting the broker / borrower Mortgages Portal
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: lendinvest-openid-configuration.json
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/ai-plugin.json
+    status: 401

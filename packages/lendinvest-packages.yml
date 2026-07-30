@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: registry sweep of npm, PyPI, Packagist, RubyGems, crates.io, NuGet and the LendInvest GitHub organisation
+summary: >-
+  No first-party LendInvest client library exists in any public package registry. LendInvest
+  publishes no public developer API, so there is nothing for an SDK to wrap. The registry
+  sweep and the GitHub search below are recorded so future runs do not repeat them; this file
+  intentionally carries an empty packages[] rather than a fabricated entry, and NO SDKs
+  pointer is wired into apis.yml.
+registries_checked:
+- registry: npm
+  query: lendinvest
+  results: 0
+- registry: pypi
+  query: lendinvest
+  results: 0
+  status: 404
+- registry: packagist
+  query: lendinvest
+  results: 0
+- registry: rubygems
+  query: lendinvest
+  results: 0
+- registry: crates.io
+  query: lendinvest
+  results: 0
+- registry: nuget
+  query: lendinvest
+  results: 0
+github:
+  organization: https://github.com/lend-invest
+  public_repos: 6
+  first_party_sdks: 0
+  note: >-
+    The lend-invest GitHub organisation is genuinely LendInvest's (its profile links to
+    www.lendinvest.com) but contains only forks of third-party PHP tooling
+    (GfreeauGetJWTBundle, soap-client-bundle, echo-service, jenkins-php-api,
+    PackageGenerator, PackageBase) — no published client library. The separate
+    github.com/lendinvest account is an empty placeholder user with 0 public repos. A
+    GitHub-wide repository search for "lendinvest" returns 68 results, all of which are
+    third-party candidate coding-test submissions, not LendInvest software.
+packages: []

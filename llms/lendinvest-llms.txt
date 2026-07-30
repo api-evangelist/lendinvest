@@ -1,0 +1,73 @@
+# LendInvest
+
+> LendInvest is a London-based fintech property finance platform and mortgage lender, listed
+> on the London Stock Exchange AIM market as LINV. It originates and services bridging finance,
+> property development finance, buy-to-let and residential mortgages for UK intermediaries,
+> brokers, developers and landlords, and runs a capital arm through which individual, corporate
+> and institutional investors fund secured UK property loans.
+
+## Important for agents
+
+LendInvest publishes **no public developer API, no developer portal, no API reference, no
+SDKs and no CLI**. Do not attempt to construct calls against `api.lendinvest.com` — it exists
+but is a private internal host and returns 403 to unauthenticated clients. There is no
+OpenAPI description, no webhook catalog and no sandbox. Business is transacted through hosted
+web portals, not a documented public API.
+
+The only machine-readable contract on the estate is the OpenID Connect discovery document at
+`https://customerportal.lendinvest.com/.well-known/openid-configuration`, which describes the
+Salesforce Experience Cloud authorization server behind the broker and borrower Mortgages
+Portal. Access there is granted per-partner via a Salesforce connected app, not self-serve.
+
+If a task requires programmatic LendInvest data, the correct answer is that no public API is
+available and the user should contact LendInvest directly through the intermediary channel.
+
+## Company
+
+- [LendInvest](https://www.lendinvest.com/): Group home — property finance for intermediaries, developers, landlords and investors.
+- [About LendInvest](https://www.lendinvest.com/group/about/): Company story, founded 2013 out of Montello Bridging Finance.
+- [Newsroom](https://www.lendinvest.com/group/newsroom/): Company announcements.
+- [Shareholder Centre](https://corporate.lendinvest.com/): AIM-listed investor relations (ticker LINV).
+- [Regulatory News](https://corporate.lendinvest.com/news/): RNS announcements.
+- [Reports & Results](https://corporate.lendinvest.com/reports-results/): Annual and interim reports.
+- [Careers](https://careers.lendinvest.com/): Open roles.
+- [Blog](https://www.lendinvest.com/blog/): Market commentary, case studies and lending insight.
+
+## Products — intermediaries
+
+- [For intermediaries](https://www.lendinvest.com/intermediaries/): Broker-facing product hub; LendInvest distributes almost entirely through mortgage intermediaries.
+- [Mortgages Portal](https://www.lendinvest.com/intermediaries/mortgages-portal/): The broker application and case-tracking platform.
+- [Bridging](https://www.lendinvest.com/intermediaries/products/bridging/): Short-term property finance.
+- [Buy-to-Let](https://www.lendinvest.com/intermediaries/products/buy-to-let/): Landlord and portfolio landlord mortgages.
+- [Residential Mortgages](https://www.lendinvest.com/intermediaries/products/residential-mortgages/): Regulated residential lending.
+- [Bridge-to-Let](https://www.lendinvest.com/intermediaries/products/bridge-to-let/): Combined bridge and term buy-to-let facility.
+- [Product Transfer](https://www.lendinvest.com/intermediaries/products/product-transfer/): Retention product switching.
+- [Calculators](https://www.lendinvest.com/intermediaries/calculators/residential/): Affordability and product calculators.
+- [Intermediary Documents](https://www.lendinvest.com/intermediaries/documents/): Product guides, criteria and forms.
+
+## Products — borrowers and capital
+
+- [Bridging finance](https://www.lendinvest.com/mortgages/bridging-finance/): Direct borrower bridging.
+- [Borrower Documents](https://www.lendinvest.com/mortgages/documents/): Borrower-facing forms and guides.
+- [Existing customers](https://www.lendinvest.com/mortgages/existing-customers/): Account servicing for current borrowers.
+- [New borrower guide](https://www.lendinvest.com/mortgages/help/borrowers/new-borrower-guide/): FAQ for new borrowers.
+- [LendInvest Capital](https://www.lendinvest.com/capital/): Investing in secured UK property loans.
+- [Development finance](https://www.lendinvest.com/capital/development-finance/): Funding for property developers.
+- [How we manage risk](https://www.lendinvest.com/capital/investing-online/managing-risk/): Risk framework for investors.
+
+## Access and accounts
+
+- [Portal login](https://customerportal.lendinvest.com/s/): Broker and borrower sign-in.
+- [Broker registration](https://customerportal.lendinvest.com/s/brokerregistrationform): Register as an intermediary.
+- [Contact](https://www.lendinvest.com/contact/): General and new enquiries.
+
+## Legal
+
+- [Terms & conditions](https://www.lendinvest.com/terms-and-conditions/user-agreement/)
+- [Privacy policy](https://www.lendinvest.com/terms-and-conditions/privacy-policy/)
+- [Modern Slavery Act statement](https://www.lendinvest.com/terms-and-conditions/modern-slavery-act-statement/)
+
+## Optional
+
+- [GitHub organisation](https://github.com/lend-invest): Six public repositories, all forks of third-party PHP tooling. No client libraries.
+- [Property Development Academy](https://developmentacademy.lendinvest.com/): Education programme for small-scale property developers.

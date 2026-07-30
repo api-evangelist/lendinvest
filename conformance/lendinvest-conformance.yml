@@ -1,0 +1,89 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://customerportal.lendinvest.com/.well-known/openid-configuration plus live DNS/TLS
+  probes recorded in security/lendinvest-domain-security.yml
+notes: >-
+  LendInvest publishes no public developer API, so there is no OpenAPI, no error contract
+  and no pagination or idempotency convention to assert conformance against. The assertions
+  below cover only what is genuinely observable: the OAuth 2.0 / OpenID Connect authorization
+  server fronting the broker portal, and the transport and email-authentication posture of
+  the lendinvest.com estate. Regulatory status is stated as fact of authorisation, not as a
+  technical conformance claim.
+standards:
+- id: oidc
+  name: OpenID Connect Discovery 1.0
+  conforms: true
+  evidence: >-
+    customerportal.lendinvest.com serves a valid /.well-known/openid-configuration with
+    issuer, authorization_endpoint, token_endpoint, userinfo_endpoint, jwks_uri and
+    RS256 id_token signing. Saved verbatim at well-known/lendinvest-openid-configuration.json.
+- id: oauth2
+  name: OAuth 2.0 (RFC 6749)
+  conforms: true
+  evidence: >-
+    Authorization code and implicit response types advertised; token, revocation
+    (RFC 7009) and introspection (RFC 7662) endpoints published.
+- id: rfc7591
+  name: OAuth 2.0 Dynamic Client Registration
+  conforms: true
+  evidence: registration_endpoint published at /services/oauth2/register.
+- id: private_key_jwt
+  name: Private Key JWT client authentication (RFC 7523)
+  conforms: true
+  evidence: token_endpoint_auth_methods_supported includes private_key_jwt.
+- id: rfc9116
+  name: security.txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on www.lendinvest.com and api.lendinvest.com.
+- id: hsts
+  name: HTTP Strict Transport Security (RFC 6797)
+  conforms: true
+  evidence: www.lendinvest.com sets Strict-Transport-Security with max-age=31536000.
+- id: dnssec
+  name: DNSSEC
+  conforms: true
+  evidence: lendinvest.com is DNSSEC-signed (probed).
+- id: dmarc
+  name: DMARC (RFC 7489)
+  conforms: true
+  evidence: lendinvest.com publishes a DMARC record with policy p=reject; SPF present.
+- id: mta_sts
+  name: SMTP MTA Strict Transport Security (RFC 8461)
+  conforms: true
+  evidence: >-
+    mta-sts.lendinvest.com, mta-sts.loans.lendinvest.com and
+    mta-sts.loanservicing.lendinvest.com hold issued TLS certificates in certificate
+    transparency logs, indicating published MTA-STS policy hosts.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: No OpenAPI or Swagger description published on any LendInvest host.
+- id: rfc9457
+  name: Problem Details for HTTP APIs
+  conforms: false
+  evidence: No public API or error contract published.
+- id: psd2
+  name: PSD2 / Open Banking dedicated interface
+  conforms: false
+  evidence: >-
+    LendInvest is a lender and a consumer of Open Banking data in its buy-to-let
+    underwriting, not an ASPSP; it publishes no Open Banking dedicated interface.
+regulatory:
+- id: fca_authorised
+  name: FCA authorisation
+  conforms: true
+  evidence: >-
+    LendInvest group entities are authorised and regulated by the UK Financial Conduct
+    Authority for regulated mortgage lending; regulatory disclosures are published at
+    https://www.lendinvest.com/terms-and-conditions/user-agreement/.
+- id: lse_aim_listed
+  name: London Stock Exchange AIM listing
+  conforms: true
+  evidence: >-
+    Listed on AIM under ticker LINV since July 2021; regulatory news and reports published
+    at https://corporate.lendinvest.com/news/.
+- id: modern_slavery_act
+  name: UK Modern Slavery Act statement
+  conforms: true
+  evidence: https://www.lendinvest.com/terms-and-conditions/modern-slavery-act-statement/
