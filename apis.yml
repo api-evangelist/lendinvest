@@ -52,8 +52,8 @@ tags:
 - Lending
 - Mortgage
 - Property Finance
-- Real-Estate
-- Financial-Services
+- Real Estate
+- Financial Services
 - United Kingdom
 tags_raw:
 - Company
@@ -64,6 +64,8 @@ tags_raw:
 - Real Estate
 - Financial Services
 - United Kingdom
+- Real-Estate
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
