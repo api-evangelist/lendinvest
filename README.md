@@ -64,6 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LendInvest is a company surfaced as a portfolio company of atomico and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+LendInvest is a London-based fintech property finance platform and mortgage lender, founded in 2013 after spinning out of Montello Bridging Finance, and listed on the London Stock Exchange AIM market under the ticker LINV since July 2021. It originates and services short-term bridging finance, property development finance, buy-to-let and residential mortgages for UK intermediaries, brokers, property developers, landlords and investors, and runs a parallel capital business that lets individual, corporate and institutional investors put money into secured UK property loans. The company distributes almost entirely through mortgage intermediaries via its Mortgages Portal, and was the first UK fintech to securitise its own buy-to-let loan book. LendInvest publishes no public developer API, developer portal or SDKs; its broker and borrower integrations run through hosted portals rather than a documented public API surface.
 
-Backed by: atomico — https://www.lendinvest.com
+**Areas:** Company · Fintech · Lending · Mortgage · Property Finance · Real Estate · Financial Services · United Kingdom
+
+## LendInvest on APIs.io
+
+Everything profiled for LendInvest is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lendinvest/](https://apis.io/providers/lendinvest/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lendinvest Authentication](https://apis.io/security/lendinvest/lendinvest-authentication/)
+- [Lendinvest Domain Security](https://apis.io/security/lendinvest/lendinvest-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Lendinvest Scopes](https://apis.io/scopes/lendinvest/lendinvest-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lendinvest.com)
+- [Sign up](https://customerportal.lendinvest.com/s/brokerregistrationform)
+- [Support](https://www.lendinvest.com/contact/)
+- [Blog](https://www.lendinvest.com/blog/)
+- [Terms of service](https://www.lendinvest.com/terms-and-conditions/user-agreement/)
+- [Privacy policy](https://www.lendinvest.com/terms-and-conditions/privacy-policy/)
+- [GitHub](https://github.com/lend-invest)
+
+## API Evangelist rating
+
+**Kin Score 21.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 34.2 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lendinvest/](https://apis.io/providers/lendinvest/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LendInvest: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lendinvest/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
